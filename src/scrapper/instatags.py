@@ -5,7 +5,6 @@ import json
 
 # get trending hastags from instagram
 def get_trending_hashtags(url):
-    try:
         response = requests.get(url)
         response.raise_for_status()
         soup = bs4.BeautifulSoup(response.text, 'html.parser')

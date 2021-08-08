@@ -1,9 +1,6 @@
 from flask import Flask, request
 from flask_restful import Resource
 from PIL import Image 
-import os
-from google.cloud import vision
-import requests
 import json 
 from src.model.hashtag import Prediction
 

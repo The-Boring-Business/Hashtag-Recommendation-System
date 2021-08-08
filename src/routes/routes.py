@@ -1,5 +1,6 @@
 from src.api.visiontag import ImageApi
 from src.api.docs import Home
+
  
 
 def initialize_routes(Api):

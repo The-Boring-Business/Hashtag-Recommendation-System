@@ -30,17 +30,12 @@ class Prediction:
                 shared_data = re.sub(";$", "", shared_data)
                 shared_data = json.loads(shared_data)
                 return shared_data
-    def get_trending_tags(self, tag):
+    def get_twitter_trending_tags(self, tag):
         '''
-        get trending hashtags from twitter
+        get tweets based on hashtags
         '''
-        url = self.twitter_base_url + 'trends/place?id=1'
-        response = bs4.BeautifulSoup(requests.get(url).text, "html.parser")
-        trends = response.find_all("a", {"class": "wf-f6"})
-        for trend in trends:
-            if trend.text == tag:
-                return trend.parent.parent.find_all("a", {"class": "wf-f6"})[1].text
-        return None
+        
+
 
     def niche_prediction(self, niche):
             '''
